@@ -1,0 +1,34 @@
+Model Summary:
+Base Model: ResNet50 (pre-trained on ImageNet) with top layers excluded.
+
+Custom Model Architecture:
+Flatten Layer
+Dense Layer with 50 units and softmax activation.
+
+Hyperparameters:
+Optimizer: Stochastic Gradient Descent (SGD)
+Loss Function: Categorical Crossentropy
+Data Augmentation:
+Rotation Range: 20
+Width Shift Range: 0.2
+Height Shift Range: 0.2
+Shear Range: 0.2
+Zoom Range: 0.2
+Horizontal Flip: True
+Fill Mode: Nearest
+
+Training Parameters:
+Batch Size: 32
+Epochs: 20
+
+Model Training:
+Training Dataset: X_train, y_train_encoded
+Data Augmentation: Applied using ImageDataGenerator
+Training Duration: 20 epochs
+Training Loss (Final Epoch): 0.1184
+Training Accuracy (Final Epoch): 96.48%
+
+Model Evaluation:
+Test Dataset: X_test, y_test_encoded
+Test Loss: 1.0445
+Test Accuracy: 83.08%
